@@ -25,3 +25,22 @@ LCoutput.txt - output file with tidy data set
 readme.md - this file with general infomration about the repository/project
 codebook.md - the codebook with the plain instructions/descriptions of how the data was loaded/processed/output
 features_info.txt - the associated file with the descriptions of each activity including units of measure
+
+* Description
+
+data modifications to the UCI HAR dataset
+
+Assumes that files have already been downloaded to a working directory.
+Files can be accessed at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Individual files are loaded into memory
+Slashes are removed from each data set
+x.test and x.train dataset names are replaced with the values from the features.txt file V2 column
+Subject, x, and y train and test datasets are merged together
+Activity descriptions are added to the Y data set
+Column names for subject data ('subject id') and y data ('activity id') are updated to be descriptive
+Redundant column is removed from the Y data set
+Column names with 'mean' and 'std' are extracted into temporary lists and merged; new data set is extracted with just those columns
+Tidy set created by combining Subject, Activity, and Mean/Std data
+Tidy data set is melted, grouped, and summarized to produce the average of each variable for each subject
+Final data set is exported to a text file with write.table command
