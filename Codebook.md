@@ -16,3 +16,38 @@ Files can be accessed at https://d396qusza40orc.cloudfront.net/getdata%2Fproject
 11. Final data set is exported to a text file with write.table command  
 
 Information on the individual features, as well as the units for each variable, can be found in the features_info.txt located in this directory (or loaded with the dataset).
+
+
+Fields contained in the output file  
+subject.id - ID number of the subject  
+activity.id - description of the activity taking place  
+
+values for MEAN and STD for each of X, Y, and Z axises:
+tBodyAcc
+tGravityAcc
+tBodyAccJerk
+tBodyGyro
+tBodyGyroJerk
+fBodyAcc
+fBodyAccJerk
+fBodyGyro
+
+values for MEAN and STD for each:
+tBodyAccMag  
+tGravityAccMag  
+tBodyAccJerkMag  
+tBodyGyroMag  
+tBodyGyroJerkMag  
+fBodyAccMag  
+fBodyAccJerkMag  
+fBodyGyroMag  
+fBodyGyroJerkMag  
+
+values only for MEAN:  
+angletBodyAccMeangravity  
+angletBodyAccJerkMeangravityMean  
+angletBodyGyroMeangravityMean  
+angletBodyGyroJerkMeangravityMean  
+angleXgravityMean  
+angleYgravityMean  
+angleZgravityMean
