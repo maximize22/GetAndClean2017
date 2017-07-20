@@ -15,3 +15,4 @@ Files can be accessed at https://d396qusza40orc.cloudfront.net/getdata%2Fproject
 10. Tidy data set is melted, grouped, and summarized to produce the average of each variable for each subject  
 11. Final data set is exported to a text file with write.table command  
 
+Information on the individual features, as well as the units for each variable, can be found in the features_info.txt located in this directory (or loaded with the dataset).
