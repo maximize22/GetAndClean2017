@@ -3,21 +3,21 @@ library(dplyr)
 library(reshape2)
 
 ###read in 6 data files
-setwd("c:/devl/coursera/GACD/")
+#setwd("c:/devl/coursera/GACD/UCI HAR Dataset")
 working.directory <- getwd()
 
-subj.test <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/test/subject_test.txt"))
-x.test <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/test/x_test.txt"))
-y.test <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/test/y_test.txt"))
+subj.test <- read.table(file=paste0(working.directory,"/test/subject_test.txt"))
+x.test <- read.table(file=paste0(working.directory,"/test/x_test.txt"))
+y.test <- read.table(file=paste0(working.directory,"/test/y_test.txt"))
 
-subj.train <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/train/subject_train.txt"))
-x.train <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/train/x_train.txt"))
-y.train <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/train/y_train.txt"))
+subj.train <- read.table(file=paste0(working.directory,"/train/subject_train.txt"))
+x.train <- read.table(file=paste0(working.directory,"/train/x_train.txt"))
+y.train <- read.table(file=paste0(working.directory,"/train/y_train.txt"))
 
 ###read in file with x-header info
-x.head <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/features.txt"))
+x.head <- read.table(file=paste0(working.directory,"/features.txt"))
 
-y.vals <- read.table(file=paste0(working.directory,"/UCI HAR Dataset/activity_labels.txt"))
+y.vals <- read.table(file=paste0(working.directory,"/activity_labels.txt"))
 
 ###remove ugly characters
 x.head$V2 <- gsub("([\\(\\)\\,])","",x.head$V2)
